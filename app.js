@@ -42,6 +42,9 @@ app.post("/upload",(req,res)=>{
     // Here We are actually uploading file to cloudinary . This upload method takes first arg as img and
     //  second as callback which contains error and result as args . In result we will get our image URl if it successfully uploaded.
 
+
+    // If you want to upload a video just simple add 2nd argument of upload() as {resource_type:"video"} until video size is less than 100MB .
+    // IF video is larger than 100MB use upload_large() in place of upload()
     cloudinary.v2.uploader.upload(file.tempFilePath,
  
   function(error, result)
