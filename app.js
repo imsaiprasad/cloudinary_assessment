@@ -45,6 +45,7 @@ app.post("/upload",(req,res)=>{
 
     // If you want to upload a video just simple add 2nd argument of upload() as {resource_type:"video"} until video size is less than 100MB .
     // IF video is larger than 100MB use upload_large() in place of upload()
+    //If you want to upload Audio files . Process is same as of Videos . Cloudinary stores Audio files as Video format. So Chill.
     cloudinary.v2.uploader.upload(file.tempFilePath,
  
   function(error, result)
